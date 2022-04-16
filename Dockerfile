@@ -1,1 +1,3 @@
 FROM python
+
+WORKDIR /hello
