@@ -22,5 +22,11 @@ pip install django
 ## Criando projeto na raiz do diretório
 django-admin startproject nome-do-projeto .
 
+## Criando app na no projeto
+django-admin startapp nome-do-app
+
+## Iniciando servidor django do projeto
+python3 manage.py runserver
+
 ## Gerando arquivo com os requerimentos do projeto
 pip freeze > requirements.txt
