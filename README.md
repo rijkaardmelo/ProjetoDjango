@@ -30,13 +30,13 @@
 
     django-admin startproject nome-do-projeto .
 
-<h4> Criando app na no projeto </h4>
+<h4> Criando app no projeto </h4>
 
     django-admin startapp nome-do-app
 
 <h4> Iniciando servidor django do projeto </h4>
     
-    python3 manage.py runserver
+    python manage.py runserver
 
 <h4> Gerando arquivo com os requerimentos do projeto </h4>
     
