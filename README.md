@@ -1,6 +1,7 @@
 <h1 align="center"> Tutorial Django </h1>
 
-## Linux
+<p> Linux </p>
+
 ### Instalando Python3, pip e venv
     sudo apt install python3 python3-pip python3-venv
 
