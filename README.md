@@ -28,5 +28,5 @@
 ### Iniciando servidor django do projeto
     python3 manage.py runserver
 
-### Gerando arquivo com os requerimentos do projeto
+<h4> Gerando arquivo com os requerimentos do projeto </h4>
     pip freeze > requirements.txt
