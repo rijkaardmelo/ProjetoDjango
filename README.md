@@ -1,4 +1,4 @@
-# Tutorial Django
+<h1 align="center"> Tutorial Django </h1>
 
 ## Linux
 ### Instalando Python3, pip e venv
@@ -29,4 +29,5 @@
     python3 manage.py runserver
 
 <h4> Gerando arquivo com os requerimentos do projeto </h4>
+    
     pip freeze > requirements.txt
