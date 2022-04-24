@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  database:
+    container_name: postgres
+    image: postgres
+    restart: always
+    volumes:
+      - ./Database/postgres:/var/lib/postgresql/data
+    env_file:
+      - ./Database/config/database.env
+    networks:
+      ext:
+        ipv4_address: 192.168.0.7
+      int:
+        ipv4_address: 10.200.0.3
+    ports:
+      - '5432:5432'
+
+networks:
+  int:
+    name: django-interno
+    driver: bridge
+    #driver_opts:
+      #parent: wlo1
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.200.0.0/24  
+          gateway: 10.200.0.1
+  ext:
+    external:
+      name: ext
