@@ -12,24 +12,24 @@ services:
       - ./Database/config/database.env
     networks:
       int:
-        ipv4_address: 10.200.0.2
+        ipv4_address: 10.10.0.2
     ports:
       - '5432:5432'
 
   web:
-    #depends_on:
-      #- database
+    depends_on:
+      - database
     container_name: web
     build: ./Web
     command: python manage.py runserver 0.0.0.0:8000
     restart: always
     volumes:
-      - .:/APP/
+      - django:/APP/
     networks:
       int:
-        ipv4_address: 10.200.0.3
+        ipv4_address: 10.10.0.3
       ext:
-        ipv4_address: 192.168.0.3
+        ipv4_address: 10.200.50.0
     ports:
       - '8000:8000'
 
@@ -42,8 +42,8 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 10.200.0.0/24  
-          gateway: 10.200.0.1
+        - subnet: 10.10.0.0/24  
+          gateway: 10.10.0.1
   ext:
     external:
       name: ext
