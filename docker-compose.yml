@@ -21,6 +21,7 @@ services:
       - database
     container_name: web
     build: ./Web
+    image: web
     command: python manage.py runserver 0.0.0.0:80
     restart: always
     volumes:
@@ -29,7 +30,7 @@ services:
       int:
         ipv4_address: 10.10.0.3
       ext:
-        ipv4_address: 10.200.50.0
+        ipv4_address: 192.168.0.3
     ports:
       - '80:80'
 
@@ -50,3 +51,4 @@ networks:
 
 volumes:
   django:
+    name: django

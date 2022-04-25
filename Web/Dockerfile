@@ -11,6 +11,12 @@ COPY requirements.txt /APP/
 
 RUN pip install -r requirements.txt
 
-COPY . /APP/
+# COPY ./env/ /APP
+# COPY ./hello/ /APP
+# COPY ./manage.py /APP
+# COPY ./db.sqlite3 /APP
+# COPY ./README.md /APP
+# COPY ./Dockerfile /APP
+COPY . /APP
 
 EXPOSE 80
